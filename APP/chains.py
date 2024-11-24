@@ -7,6 +7,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 class Chain:
     def __init__(self):
         self.llm = ChatGroq(temperature=0, groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama-3.1-70b-versatile")
