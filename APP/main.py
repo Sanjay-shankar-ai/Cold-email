@@ -33,7 +33,7 @@ def send_email(sender_email, receiver_email, subject, body, smtp_server, smtp_po
 def create_streamlit_app(llm, portfolio, clean_text):
     st.title("📧 Cold Mail Generator")
 
-    url_input = st.text_input("Enter a URL:", value="https://jobs.nike.com/job/R-33460")
+    url_input = st.text_input("Enter a URL:")
     sender_email = st.text_input("Your Email", value="sanhulk73@gmail.com")
     receiver_email = st.text_input("Receiver's Email", value="sanjayshankar91@gmail.com")
     sender_password = st.text_input("Your Email Password", type="password")
