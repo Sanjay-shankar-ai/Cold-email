@@ -7,10 +7,6 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-_import_('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 
 def send_email(sender_email, receiver_email, subject, body, smtp_server, smtp_port, sender_password):
     msg = MIMEMultipart()
